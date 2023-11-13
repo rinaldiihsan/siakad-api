@@ -72,7 +72,7 @@ jadwalMatkulController.getById = async (req, res) => {
         },
       ],
     });
-    if (getJadwalMatkul === null) {
+    if (getJadwalMatkulById === null) {
       throw Error('Data tidak ditemukan!');
     } else {
       return res.status(200).json({

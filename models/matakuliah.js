@@ -13,9 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         through: models.DosenMatkul,
         foreignKey: 'id_matkul',
       });
-      
-      // Asosiasi dengan model JadwalMatkul
-      MataKuliah.hasMany(models.JadwalMatkul, {
+      MataKuliah.hasOne(models.JadwalMatkul, {
         foreignKey: 'id_matkul',
       });
     }
